@@ -22,19 +22,21 @@ body {
     background: var(--blueberry);
   }
 header{
-    margin: 2em 0;
-    padding: 2em;
+    margin: 0;
+    padding: 4em 2em;
+    min-height: 70vh;
   }
 header h1{
-  font-size: 2.8em;
+  font-size: 2em;
   line-height: 120%;
   font-weight: bold;
-  margin-bottom: 0.5em;
+  margin: 0;
+  margin-bottom: 0.5em; 
 }
 header p{
   max-width: 32em;
-  font-size: 1.3em;
-  line-height: 1.4;
+  font-size: 1.2em;
+  line-height: 1.3;
 }
 header a{
   color:  var(--white);
@@ -43,7 +45,7 @@ header a:hover, header a:focus{
   color: var(--blueberry);
   background:  var(--white);
 }
-/* Filtler systeem */
+/* Filter systeem */
 nav{
   margin: 2em 0;
   padding: 2em;
@@ -63,7 +65,7 @@ nav p{
   /* QUOTES */
   figure{
     margin: 0;
-    padding: 2rem;
+    padding: 0.5rem;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -71,65 +73,100 @@ nav p{
     justify-content: center;
   }
   blockquote{
-    font-size: 2.8rem;
+    font-size: 2rem;
     font-weight:bold;
     display: inline-block;
     margin: 2rem 0 1rem 0;
-    padding: 3rem;
+    padding: 3rem 1.5rem;
     border: 0.1rem solid;
     border-radius: var(--rounded);
   }
   blockquote p{
-      margin: 0;
-      padding: 0;
+    margin: 0;
+    padding: 0;
   }
   figcaption{
     display: inline-block;
-    font-size: 1.5rem;
-    padding: 0.5rem 3rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
     border: 0.1rem solid;
     border-radius: var(--pilled);
   }
 
+  /* quotes om en om andere kleuren */
+  figure:nth-child(odd){
+    background: gold;
+  }
+
   /* turquoise */
-  .turquoise {
+  figure:nth-child(odd) {
     background-color: var(--turquoise);
   }
-  .turquoise blockquote {
+  figure:nth-child(odd) blockquote {
     background-color: var(--blueberry);
     color: var(--turquoise);
     border-color: var(--blueberry);
   }
-  .turquoise figcaption{
+  figure:nth-child(odd) figcaption{
     color: var(--blueberry);
     border-color: var(--blueberry);
   }
 
   /* lavender */
-  .lavender {
+  figure:nth-child(even) {
     background-color: var(--lavender);
   }
-  .lavender blockquote {
+  figure:nth-child(even) blockquote {
     background-color: var(--blueberry);
     color: var(--lavender);
     border-color: var(--blueberry);
   }
-  .lavender figcaption{
+  figure:nth-child(even) figcaption{
     color: var(--blueberry);
     border-color: var(--blueberry);
   }
 
+
+  /* MEDIA QUERY - MEDIUM  */
+  @media screen and (min-width:25rem) {
+    header h1{
+      font-size: 2.8rem;
+    }
+    header p{
+      font-size: 1.3rem;
+      line-height: 1.4;
+    }
+    figure{
+      padding: 1rem;
+    }
+    blockquote{
+      font-size: 2.8rem;
+    }
+    figcaption{
+      font-size: 1.3rem;
+      padding: 0.5rem 3rem;
+  }
+
+   /* MEDIA QUERY - LARGE  */
   @media screen and (min-width:40rem) {
+    header{
+      padding: 6rem 4rem;
+    }
+    figure{
+      padding: 2rem;
+    }
     blockquote{
       font-size: 6vw;
       max-width: 40rem;
+      padding: 3rem;
     }
-    .longquote blockquote{
+    .long blockquote{
       font-size: 5vw;
       max-width: 90vw;
     }
   }
 
+   /* MEDIA QUERY - EXTRA LARGE  */
   @media screen and (min-width:60rem) {
     blockquote{
       max-width: 74vw;
