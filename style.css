@@ -1,0 +1,127 @@
+*{
+  box-sizing: border-box;
+}
+:root {
+	--white: #ffffff;
+	--blueberry: #050542;
+	--turquoise:#66e5bf;
+	--lavender: #a675f5;
+    --attention: #050542;
+    --attention-background: #05054233;
+    --call-to-action: #FFFC86;
+    --rounded: 1rem;
+    --pilled: 2rem;
+    --shadow: .3rem;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
+    color: var(--white);
+    background: var(--blueberry);
+  }
+header{
+    margin: 2em 0;
+    padding: 2em;
+  }
+header h1{
+  font-size: 2.8em;
+  line-height: 120%;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+header p{
+  max-width: 32em;
+  font-size: 1.3em;
+  line-height: 1.4;
+}
+header a{
+  color: white;
+}
+header a:hover, header a:focus{
+  color: var(--blueberry);
+  background: white;
+}
+/* Filtler systeem */
+nav{
+  margin: 2em 0;
+  padding: 2em;
+  display: none;
+}
+nav h3{
+  font-size: 2.8em;
+  margin-bottom: 0.5em;
+}
+nav p{
+  max-width: 32em;
+  font-size: 1.3em;
+  line-height: 1.4;
+}
+
+
+  /* QUOTES */
+  figure{
+    margin: 0;
+    padding: 2rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  blockquote{
+    font-size: 4rem;
+    font-size: 6vw;
+    font-weight:bold;
+    display: inline-block;
+    max-width: 66vw;
+    margin: 2rem 0 1rem 0;
+    padding: 3rem;
+    border: 0.1rem solid;
+    border-radius: 1rem;
+  }
+  blockquote p{
+      margin: 0;
+      padding: 0;
+  }
+  figcaption{
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 0.5rem 3rem;
+    border: 0.1rem solid;
+    border-radius: 2rem;
+  }
+
+  /* turquoise */
+  .turquoise {
+    background-color: var(--turquoise);
+  }
+  .turquoise blockquote {
+    background-color: var(--blueberry);
+    color: var(--turquoise);
+    border-color: var(--blueberry);
+  }
+  .turquoise figcaption{
+    color: var(--blueberry);
+    border-color: var(--blueberry);
+  }
+
+  /* lavender */
+  .lavender {
+    background-color: var(--lavender);
+  }
+  .lavender blockquote {
+    background-color: var(--blueberry);
+    color: var(--lavender);
+    border-color: var(--blueberry);
+  }
+  .lavender figcaption{
+    color: var(--blueberry);
+    border-color: var(--blueberry);
+  }
+
+  .longquote blockquote{
+    font-size: 5vw;
+    max-width: 80vw;
+  }
