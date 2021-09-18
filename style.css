@@ -2,10 +2,10 @@
   box-sizing: border-box;
 }
 :root {
-	--white: #ffffff;
-	--blueberry: #050542;
-	--turquoise:#66e5bf;
-	--lavender: #a675f5;
+    --white: #ffffff;
+    --blueberry: #050542;
+    --turquoise:#66e5bf;
+    --lavender: #a675f5;
     --attention: #050542;
     --attention-background: #05054233;
     --call-to-action: #FFFC86;
@@ -37,11 +37,11 @@ header p{
   line-height: 1.4;
 }
 header a{
-  color: white;
+  color:  var(--white);
 }
 header a:hover, header a:focus{
   color: var(--blueberry);
-  background: white;
+  background:  var(--white);
 }
 /* Filtler systeem */
 nav{
@@ -64,22 +64,20 @@ nav p{
   figure{
     margin: 0;
     padding: 2rem;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
   }
   blockquote{
-    font-size: 4rem;
-    font-size: 6vw;
+    font-size: 2.8rem;
     font-weight:bold;
     display: inline-block;
-    max-width: 66vw;
     margin: 2rem 0 1rem 0;
     padding: 3rem;
     border: 0.1rem solid;
-    border-radius: 1rem;
+    border-radius: var(--rounded);
   }
   blockquote p{
       margin: 0;
@@ -90,7 +88,7 @@ nav p{
     font-size: 1.5rem;
     padding: 0.5rem 3rem;
     border: 0.1rem solid;
-    border-radius: 2rem;
+    border-radius: var(--pilled);
   }
 
   /* turquoise */
@@ -121,7 +119,19 @@ nav p{
     border-color: var(--blueberry);
   }
 
-  .longquote blockquote{
-    font-size: 5vw;
-    max-width: 80vw;
+  @media screen and (min-width:40rem) {
+    blockquote{
+      font-size: 6vw;
+      max-width: 40rem;
+    }
+    .longquote blockquote{
+      font-size: 5vw;
+      max-width: 90vw;
+    }
+  }
+
+  @media screen and (min-width:60rem) {
+    blockquote{
+      max-width: 74vw;
+    }
   }
