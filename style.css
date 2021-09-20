@@ -22,21 +22,24 @@ body {
     background: var(--blueberry);
   }
 header{
+    position: relative;
     margin: 0;
-    padding: 2em;
+    padding: 1rem;
     min-height: 90vh;
+    /* display:none; */
   }
 header h1{
   font-size: 1.2em;
   font-weight: normal;
-  width: 20rem;
+  /max-width: 20rem;
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
   gap: 0.2rem;
   background: var(--turquoise);
   padding: 3rem 1rem 1rem 1rem;
-  margin: 0 0 2rem 0;
+  margin: -1rem;
+  margin-bottom: 2rem;
 }
   header h1 span{
     display: inline-block;
@@ -58,13 +61,13 @@ header h1{
   header h1 span:nth-child(2){
     background: var(--blueberry);
     color: var(--turquoise);
-    width: 50%;
+    width: 49%;
     border-radius: 0;
   }
   header h1 span:nth-child(3){
     background: var(--turquoise);
     color: var(--blueberry);
-    flex-grow: 2;
+    min-width: 49%;
     border-radius: var(--rounded);
   }
   header h1 span:nth-child(4){
@@ -113,6 +116,22 @@ header a:hover, header a:focus{
   color: var(--blueberry);
   border-radius: 50%;
 }
+button.deeplink{
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  display: block;
+  width: 2.8rem;
+  height: 2.8rem;
+  text-align: center;
+
+  font-size: 1.4rem;
+  background: var(--blueberry);
+  color: white;
+  border-radius: 50%;
+  border-color: var(--blueberry);
+  box-shadow: 0.1rem 0.1rem white;
+}
 
 /* Filter systeem */
 nav{
@@ -136,6 +155,7 @@ footer{
 
   /* QUOTES */
   figure{
+    position: relative;
     margin: 0;
     padding: 0.5rem;
     min-height: 100vh;
@@ -143,6 +163,7 @@ footer{
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    /* width: 20rem; */
   }
   blockquote{
     font-size: 2rem;
@@ -161,6 +182,7 @@ footer{
     display: inline-block;
     font-size: 1.2rem;
     padding: 0.5rem 1rem;
+    /margin-bottom: 4rem;
     border: 0.1rem solid;
     border-radius: var(--pilled);
   }
@@ -195,7 +217,13 @@ footer{
 
 
   /* MEDIA QUERY - MEDIUM  */
-  @media screen and (min-width:25rem) {
+  @media (min-width:25rem) {
+    header{
+      padding: 2em;
+    }
+    header h1{
+      max-width: 20rem;
+    }
     header h2{
       font-size: 2.8rem;
     }
@@ -215,7 +243,7 @@ footer{
   }
 
    /* MEDIA QUERY - LARGE  */
-  @media screen and (min-width:40rem) {
+  @media (min-width:40rem) {
     header{
       padding: 4rem;
     }
@@ -237,7 +265,7 @@ footer{
   }
 
    /* MEDIA QUERY - EXTRA LARGE  */
-  @media screen and (min-width:60rem) {
+  @media (min-width:60rem) {
     blockquote{
       max-width: 74vw;
     }

@@ -248,11 +248,25 @@
     <figcaption>
         Prof. Salam Al Shereida
     </figcaption>
+
 </figure>
 
 <footer>
     Footer
 </footer>
 
+<script>
+    //<button class=deeplink>#</button>
+    var quotes = document.querySelectorAll("figure");
+    for(var q of quotes){
+        var btn = document.createElement("button");
+        q.appendChild(btn);
+        btn.textContent = "#";
+        btn.classList.add("deeplink");
+        btn.addEventListener('click', function() {
+            window.location.href = '#'+this.parentElement.id;
+        });
+    }
+</script>
 </body>
 </html>
