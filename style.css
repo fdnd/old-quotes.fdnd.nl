@@ -99,7 +99,7 @@ header a{
 }
 header a:hover, header a:focus{
   color: var(--blueberry);
-  background:  var(--white);
+  background:  var(--call-to-action);
 }
 
 .downarrow{
@@ -116,7 +116,7 @@ header a:hover, header a:focus{
   color: var(--blueberry);
   border-radius: 50%;
 }
-button.deeplink{
+figure button.deeplink{
   position: absolute;
   bottom: 1rem;
   right: 2rem;
@@ -132,6 +132,18 @@ button.deeplink{
   border-color: var(--blueberry);
   box-shadow: 0.1rem 0.1rem white;
 }
+figure:nth-child(odd) button.deeplink{
+  color: var(--lavender);
+}
+figure:nth-child(even) button.deeplink{
+  color: var(--turquoise);
+}
+figure button.deeplink:hover, button.deeplink:focus{
+  cursor:pointer;
+  background: var(--call-to-action);
+  color: var(--blueberry)
+}
+
 
 /* Filter systeem */
 nav{
