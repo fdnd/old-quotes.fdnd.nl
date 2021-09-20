@@ -101,7 +101,6 @@ header a:hover, header a:focus{
   color: var(--blueberry);
   background:  var(--call-to-action);
 }
-
 .downarrow{
   position: absolute;
   bottom: 1rem;
@@ -116,33 +115,7 @@ header a:hover, header a:focus{
   color: var(--blueberry);
   border-radius: 50%;
 }
-figure button.deeplink{
-  position: absolute;
-  bottom: 1rem;
-  right: 2rem;
-  display: block;
-  width: 2.8rem;
-  height: 2.8rem;
-  text-align: center;
 
-  font-size: 1.4rem;
-  background: var(--blueberry);
-  color: white;
-  border-radius: 50%;
-  border-color: var(--blueberry);
-  box-shadow: 0.1rem 0.1rem white;
-}
-figure:nth-child(odd) button.deeplink{
-  color: var(--lavender);
-}
-figure:nth-child(even) button.deeplink{
-  color: var(--turquoise);
-}
-figure button.deeplink:hover, button.deeplink:focus{
-  cursor:pointer;
-  background: var(--call-to-action);
-  color: var(--blueberry)
-}
 
 
 /* Filter systeem */
@@ -198,9 +171,34 @@ footer{
     border: 0.1rem solid;
     border-radius: var(--pilled);
   }
-
-  /* quotes om en om andere kleuren */
-  /* turquoise */
+  figure button.deeplink{
+    position: absolute;
+    bottom: 1rem;
+    right: 2rem;
+    display: block;
+    width: 2.8rem;
+    height: 2.8rem;
+    text-align: center;
+  
+    font-size: 1.4rem;
+    background: var(--blueberry);
+    color: white;
+    border-radius: 50%;
+    border-color: var(--blueberry);
+    box-shadow: 0.1rem 0.1rem white;
+  }
+  figure:nth-child(odd) button.deeplink{
+    color: var(--lavender);
+  }
+  figure:nth-child(even) button.deeplink{
+    color: var(--turquoise);
+  }
+  figure button.deeplink:hover, figure button.deeplink:focus{
+    cursor:pointer;
+    background: var(--call-to-action);
+    color: var(--blueberry)
+  }
+  /* quotes om en om andere kleuren: turquoise */
   figure:nth-child(even) {
     background-color: var(--turquoise);
   }
@@ -213,7 +211,7 @@ footer{
     color: var(--blueberry);
     border-color: var(--blueberry);
   }
-  /* lavender */
+  /* quotes om en om andere kleuren: lavender */
   figure:nth-child(odd) {
     background-color: var(--lavender);
   }
@@ -234,7 +232,9 @@ footer{
       padding: 2em;
     }
     header h1{
-      max-width: 20rem;
+      max-width: 22rem;
+      padding: 2rem 2rem 1rem 2rem;
+      border-radius: var(--rounded);
     }
     header h2{
       font-size: 2.8rem;
